@@ -1,0 +1,6 @@
+rofi.combi-modi:    window,drun,ssh
+rofi.theme:         slate
+rofi.font:          hack 10
+rofi.modi:          combi
+rofi.show-icons:    true
+rofi.icon-theme:    hicolor;
