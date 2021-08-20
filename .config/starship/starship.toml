@@ -1,0 +1,37 @@
+# Don't print a new line at the start of the prompt
+add_newline = true
+
+[character]                            # The name of the module we are configuring is "character"
+success_symbol = "[❯❯](bold green)"     # The "success_symbol" segment is being set to "➜" with the color "bold green"
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = true
+
+[hostname]
+ssh_only = true
+format =  "on [$hostname](bold red) "
+disabled = false
+
+[conda]
+format = "[ *conda*-$environment](dimmed green) "
+
+[gcloud]
+disabled = true
+
+[aws]
+disabled = true
+
+[kubernetes]
+format = '-> [⛵ \($namespace\)](dimmed green) '
+disabled = false
+
+[terraform]
+format = "[🏎💨 $workspace]($style) " 
+
+[username]
+style_user = "white bold"
+style_root = "black bold"
+format = "user: [$user]($style) "
+disabled = false
+show_always = true
