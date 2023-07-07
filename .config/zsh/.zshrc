@@ -76,9 +76,6 @@ dxdo() {
     unset DOCKER_TLS_VERIFY
 }
 
-dcc() {
-    docker context create ${1} --docker "host=tcp://${1}.aiolab.link:2376,ca=/Users/kuba/.docker/ampere/ca.pem,cert=/Users/kuba/.docker/ampere/cert.pem,key=/Users/kuba/.docker/ampere/key.pem"
-}
 
 dodcc() {
     docker context update digital-ocean --docker "host=ssh://kuba@$(tf output -raw public_ip):4444"
@@ -93,10 +90,4 @@ dossh() {
 }
 alias di="docker images | docker-color-output"
 alias dps="docker ps | docker-color-output"
-
-#export TF_VAR_user_ocid="ocid1.user.oc1..aaaaaaaadspecwedajoq62lwr4hwf47mou7aosv24hcq5bow45rpqxkmacra"
-#export TF_VAR_fingerprint="f0:3a:e7:d6:c1:10:4f:da:84:ba:6c:36:02:cc:3e:92"
-#export TF_VAR_tenancy_ocid="ocid1.tenancy.oc1..aaaaaaaadfogwfmgjoi35onknsnu6u5zfp43gh657appkvbghhzyhfhh5oya"
-#export TF_VAR_private_key_path="/Users/kuba/Workspace/OnSpecta/terraform-oci-ampere-tensorflow/key.pem"
-#export TF_VAR_region="us-phoenix-1"
 
