@@ -13,18 +13,19 @@ ssh_only = true
 format =  "on [$hostname](bold red) "
 disabled = false
 
-[conda]
-format = "[ *conda*-$environment](dimmed green) "
-
-[gcloud]
-disabled = true
-
 [aws]
-disabled = true
+format = 'on [($profile)->(\($region\) )]($style)'
+style = "bold blue"
 
-[kubernetes]
-format = '-> [⛵ \($namespace\)](dimmed green) '
-disabled = false
+[aws.region_aliases]
+eu-central-1 = "Frankfurt"
+
+[container]
+format = "[$symbol \\[$name\\]]($style) "
+
+[docker_context]
+format = "via [🐋 $context ](blue bold)"
+only_with_files = false
 
 [terraform]
 format = "[🏎💨 $workspace]($style) " 
@@ -35,3 +36,11 @@ style_root = "black bold"
 format = "user: [$user]($style) "
 disabled = false
 show_always = true
+
+[python]
+symbol = '👾 '
+pyenv_version_name = true
+
+#[kubernetes]
+#format = 'on [⛵ ($cluster)](dimmed green) '
+#disabled = false
