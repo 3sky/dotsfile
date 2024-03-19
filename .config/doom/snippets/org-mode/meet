@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: meet
+# key: meet
+# --
+
+* `(format-time-string "%Y-%m-%d - %A")`
+
+** Agenda
+   - [ ]
+
+** Meeting Notes
+
+** Action items
+ *** TODO
